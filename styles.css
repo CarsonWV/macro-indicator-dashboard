@@ -7,7 +7,7 @@
 
 body {
   background-color: #f1f1f1;
-  padding: 30px;
+  padding: 40px;
   font-family: Arial;
 }
 
@@ -16,12 +16,38 @@ h1 {
   word-break: break-all;
 }
 
-.btn {
-  border: none;
-  outline: none;
-  padding: 20px 600px;
-  background-color: #7a7a7a;
-  cursor: pointer;
+.logo {
+  margin: 8px -16px 8px -16px;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #707070;
+  overflow: hidden;
+  margin: 8px -16px 8px -16px;
+  /*padding: 10px;*/
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #6045f7;
+  color: white;
 }
 
 .row:after {
