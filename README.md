@@ -22,14 +22,14 @@ $ pip install -r requirements.txt
 # Setup
 Configure config.ini to include:
 * API Keys for
-  * [FRED API](https://research.stlouisfed.org/docs/api/api_key.html)
-  * [Plotly API](https://community.plotly.com/t/how-could-i-get-my-api-key/3088)
+  * [FRED](https://research.stlouisfed.org/docs/api/api_key.html)
+  * [plotly](https://community.plotly.com/t/how-could-i-get-my-api-key/3088)
 * [Absolute paths](https://www.linux.com/training-tutorials/absolute-path-vs-relative-path-linuxunix/) for:
-  * Python interpreter OR [virtual environment](https://docs.python.org/3/library/venv.html) ACTIVATE file.
+  * Python interpreter OR [virtual environment](https://docs.python.org/3/library/venv.html) 'activate' file.
   * stats_updater.py (located in stats_updater folder).
 > [dos2unix](https://linux.die.net/man/1/dos2unix) might be necessary to configure config.ini and script.sh for unix.
 
 # Usage
-* Schedule script.sh to run as often as you need it using Chron  
-
 ![usage_picture](https://github.com/CarsonWV/macro-indicator-dashboard/raw/main/assets/screenshot-cropped.png)
+* Scheduling performed on unix by [Cron](https://www.raspberrypi.org/documentation/linux/usage/cron.md).
+* To schedule, create a Cron entry for 'script.sh' once config.ini has been set up. All errors logged with dates and times to error_log.txt for easy management.
