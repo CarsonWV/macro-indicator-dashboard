@@ -17,4 +17,4 @@ Configure config.ini to include:
 
 # Usage
 * Schedule script.sh to run as often as you need it using Chron
-![usage_picture]((https://github.com/CarsonWV/macro-indicator-dashboard/raw/main/assets/screenshot-cropped.png)
+![usage_picture](https://github.com/CarsonWV/macro-indicator-dashboard/raw/main/assets/screenshot-cropped.png)
