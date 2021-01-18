@@ -1,4 +1,4 @@
-![main_logo](https://github.com/CarsonWV/macro-indicator-dashboard/raw/main/assets/MacroDash-logo-white.png)
+![main_logo](https://github.com/CarsonWV/macro-indicator-dashboard/raw/main/assets/MacroDash-bg.png)
 
 # Summary
 A GitHub Pages site that hosts live-feeds of arbitrary macroeconomic indicators. 
