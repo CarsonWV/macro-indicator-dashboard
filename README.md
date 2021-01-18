@@ -1,4 +1,6 @@
 ![main_logo](https://github.com/CarsonWV/macro-indicator-dashboard/raw/main/assets/MacroDash-logo-white.png)
+
+# Summary
 A GitHub Pages site that hosts live-feeds of arbitrary macroeconomic indicators. 
 Website made of pure HTML, CSS. Stats updated daily by a python script running on a Raspberry Pi 3B.
 
@@ -15,4 +17,4 @@ Configure config.ini to include:
 
 # Usage
 * Schedule script.sh to run as often as you need it using Chron
-![usage](https://github.com/carsonwv/macro-indicator-dashboard/blob/main/screenshot-cropped.png?raw=true)
+![usage_picture](https://github.com/CarsonWV/macro-indicator-dashboard/raw/main/assets/screenshot-cropped.png)
