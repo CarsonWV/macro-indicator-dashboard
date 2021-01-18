@@ -1,4 +1,4 @@
-# MacroDash
+![main_logo](https://github.com/carsonwv/macro-indicator-dashboard/blob/main/MacroDash-logo.png?raw=true)
 A GitHub Pages site that hosts live-feeds of arbitrary macroeconomic indicators. 
 Website made of pure HTML, CSS. Stats updated daily by a python script running on a Raspberry Pi 3B.
 
@@ -12,3 +12,7 @@ Configure config.ini to include:
 * Path to "activate" file in virtual environment.
 * Path to stats_updater.py
 * If necessary, use [dos2unix](https://linux.die.net/man/1/dos2unix) to reset config and script file.
+
+# Usage
+* Schedule script.sh to run as often as you need it using Chron
+![usage](https://github.com/carsonwv/macro-indicator-dashboard/blob/main/screenshot-cropped.png?raw=true)
