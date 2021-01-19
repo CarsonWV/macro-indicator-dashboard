@@ -34,6 +34,7 @@ if fred_api_key == 'None' or plotly_username == 'None' or plotly_api_key == 'Non
 
 # Define essential program variables:
 global run_without_errors
+FRED_date = datetime.now().strftime("%Y-%m-%d")
 run_without_errors = True
 charts = []
 
@@ -64,10 +65,10 @@ def format_series(data, ident): # Turn the response series into a pandas datafra
 # Duplicated so that APIs can be swapped using minimal changes to an individual code block.
 
 # Retreive the FIRST time series (FRED GDP).
-meta_info = {"chart_name":"Real Gross Domestic Product","x_axis":"Date", "y_axis":"GDP"}
+meta_info = {"chart_name":"Unemployment Rate","x_axis":"Date", "y_axis":"Rate", "series_id":"UNRATE", "observation_start":"1995-01-01", "observation_end":FRED_date}
 try:
 	fred = Fred(fred_api_key) # Login.
-	data = fred.get_series(series_id="A191RL1Q225SBEA", observation_start="2010-01-01", observation_end="2012-01-01")
+	data = fred.get_series(series_id=meta_info["series_id"], observation_start=meta_info["observation_start"], observation_end=meta_info["observation_end"])
 	meta_info["data"] = format_series(data, meta_info)
 	charts.append(meta_info)
 	print_and_pause('Saved', meta_info["chart_name"])
@@ -75,21 +76,21 @@ except:
 	cleanup(f"Error retreiving and/or parsing series: {meta_info['chart_name']}.")
 
 # Retreive the SECOND time series (FRED CPI).	
-meta_info = {"chart_name":"Consumer Price Index for All Urban Consumers","x_axis":"Date", "y_axis":"CPI"}
+meta_info = {"chart_name":"Real Gross Domestic Product","x_axis":"Date", "y_axis":"GDP", "series_id":"A191RL1Q225SBEA", "observation_start":"1995-01-01", "observation_end":FRED_date}
 try:
 	fred = Fred(fred_api_key) # Login.
-	data = fred.get_series(series_id="CPIAUCSL", observation_start="2007-01-01", observation_end="2012-01-01")
+	data = fred.get_series(series_id=meta_info["series_id"], observation_start=meta_info["observation_start"], observation_end=meta_info["observation_end"])
 	meta_info["data"] = format_series(data, meta_info)
 	charts.append(meta_info)
 	print_and_pause('Saved', meta_info["chart_name"])
 except:
 	cleanup(f"Error retreiving and/or parsing series: {meta_info['chart_name']}.")
 
-# Retreive the THIRD time series (FRED 10-YEAR INFLATION).
-meta_info = {"chart_name":"10-Year Breakeven Inflation Rate","x_axis":"Date", "y_axis":"INF Rate"}
-try:	
+# Retreive the FIRST time series (FRED GDP).
+meta_info = {"chart_name":"Consumer Price Index for All Urban Consumers","x_axis":"Date", "y_axis":"CPI", "series_id":"CPIAUCSL", "observation_start":"1995-01-01", "observation_end":FRED_date}
+try:
 	fred = Fred(fred_api_key) # Login.
-	data = fred.get_series(series_id="T10YIE", observation_start="2006-07-01", observation_end="2012-01-01")
+	data = fred.get_series(series_id=meta_info["series_id"], observation_start=meta_info["observation_start"], observation_end=meta_info["observation_end"])
 	meta_info["data"] = format_series(data, meta_info)
 	charts.append(meta_info)
 	print_and_pause('Saved', meta_info["chart_name"])
