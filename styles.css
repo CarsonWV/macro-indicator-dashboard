@@ -1,7 +1,8 @@
 body {
   background-color: #dbdbdb;
   padding: 40px 40px 0px 40px;
-  font-family: Arial;
+  font-family: Helvetica;
+  font-size: 16;
 }
 
 h1 {
@@ -33,7 +34,7 @@ h1 {
   text-align: center;
   padding: 10px 15px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 18px;
 }
 
 /* Change the color of links on hover */
