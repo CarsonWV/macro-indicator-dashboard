@@ -61,6 +61,7 @@ def format_series(data, ident): # Turn the response series into a pandas datafra
 
 
 #################### GET DATA ####################
+# Duplicated so that APIs can be swapped using minimal changes to an individual code block.
 
 # Retreive the FIRST time series (FRED GDP).
 meta_info = {"chart_name":"Real Gross Domestic Product","x_axis":"Date", "y_axis":"GDP"}
