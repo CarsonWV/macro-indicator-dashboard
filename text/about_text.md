@@ -1,9 +1,9 @@
-MacroDash is a customizable dashboard that contains live-feeds and descriptions of arbitrary macroeconomic indicators. At present, it displays the following:
+MacroDash is a customizable dashboard that contains live-feeds and descriptions of arbitrary macroeconomic indicators. Currently displayed statistics:
 
-* [Real Gross Domestic Product (USA)](google.com)
-* [USA Consumer Price Index for All Urban Consumers (USA)](google.com)
-* [USA 10-Year Break-Even Inflation Rate (USA)](google.com)
+* Consumer Price Index for All Urban Consumers: All Items in U.S. City Average
+* Real Gross Domestic Product
+* Unemployment Rate
 
-Descriptions written and sourced by Carson Weaver. Statistics pulled from web APIs hosted by [Federal Reserve Economic Data (FRED)](https://fred.stlouisfed.org/docs/api/fred/) et al. 
+Data pulled directly from the FRED web API provided by the [Federal Reserve Bank of St. Louis](https://fred.stlouisfed.org/docs/api/fred/). Charts hosted on the [Plotly Chart Studio](https://plotly.com/chart-studio/).
 
-Website built using pure HTML and CSS. Indicators are updated daily by a Python script running on a Raspberry Pi 3B. Code is publically available on [GitHub](github.com/carsonwv/macro-indicator-dashboard) for easy download and use.
+Website built by Carson Weaver using HTML and CSS, hosted using GitHub pages. Statistics updater powered by Raspberry Pi and Python. Code and documentation publically available on [GitHub](github.com/carsonwv/macro-indicator-dashboard) for easy download and use.
