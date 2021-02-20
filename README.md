@@ -26,7 +26,7 @@ Configure config.ini to include:
   * [plotly](https://community.plotly.com/t/how-could-i-get-my-api-key/3088)
 * [Absolute paths](https://www.linux.com/training-tutorials/absolute-path-vs-relative-path-linuxunix/) for:
   * Python interpreter OR [virtual environment](https://docs.python.org/3/library/venv.html) 'activate' file.
-  * stats_updater.py (located in stats_updater folder).
+  * stats_updater.py (located in scripts folder).
 > [dos2unix](https://linux.die.net/man/1/dos2unix) might be necessary to configure config.ini and script.sh for unix.
 
 # Usage
