@@ -15,8 +15,6 @@ import chart_studio.plotly as py
 import chart_studio.tools as tls
 import plotly.express as px
 import pandas as pd
-import numpy as np
-
 
 #################### CONFIG ####################
 
@@ -28,7 +26,7 @@ plotly_api_key = config['PLOTLY']['plotly_api_key']
 plotly_username = config['PLOTLY']['plotly_username']
 request_pause_seconds = int(config['PROGRAM']['request_pause_seconds'])
 
-# Throw error if one or more doesn't exist.
+# Throw error if one or more config variables don't exist.
 if fred_api_key == 'None' or plotly_username == 'None' or plotly_api_key == 'None':
 	raise ValueError("Your config.ini file is missing one or more usernames/apikeys.")
 
