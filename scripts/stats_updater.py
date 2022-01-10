@@ -62,7 +62,7 @@ def format_series(data, ident): # Turn the response series into a pandas datafra
 #################### GET DATA ####################
 # Duplicated so that APIs can be swapped using minimal changes to an individual code block.
 
-# Retreive the FIRST time series (FRED GDP).
+# Retreive the FIRST time series (FRED Unemployment).
 meta_info = {"chart_name":"Unemployment Rate","x_axis":"Date", "y_axis":"Rate", "series_id":"UNRATE", "observation_start":"1995-01-01", "observation_end":FRED_date}
 try:
 	fred = Fred(fred_api_key) # Login.
@@ -73,7 +73,7 @@ try:
 except:
 	cleanup(f"Error retreiving and/or parsing series: {meta_info['chart_name']}.")
 
-# Retreive the SECOND time series (FRED CPI).	
+# Retreive the SECOND time series (FRED GDP).	
 meta_info = {"chart_name":"Real Gross Domestic Product","x_axis":"Date", "y_axis":"GDP", "series_id":"A191RL1Q225SBEA", "observation_start":"1995-01-01", "observation_end":FRED_date}
 try:
 	fred = Fred(fred_api_key) # Login.
@@ -84,7 +84,7 @@ try:
 except:
 	cleanup(f"Error retreiving and/or parsing series: {meta_info['chart_name']}.")
 
-# Retreive the FIRST time series (FRED GDP).
+# Retreive the THIRD time series (FRED CPI).
 meta_info = {"chart_name":"Consumer Price Index for All Urban Consumers","x_axis":"Date", "y_axis":"CPI", "series_id":"CPIAUCSL", "observation_start":"1995-01-01", "observation_end":FRED_date}
 try:
 	fred = Fred(fred_api_key) # Login.
